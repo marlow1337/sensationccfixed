@@ -37,18 +37,10 @@ void CWindow::RegisterTab(CTab* Tab)
 RECT CWindow::GetClientArea()
 {
 	RECT client;
-	if (m_HasTabs)
-		client.left = m_x + UI_TAB_WIDTH;
-	else
-		client.left = m_x;
-	client.top = m_y + UI_WIN_TOPHEIGHT + UI_WIN_TITLEHEIGHT;
-
-	if (m_HasTabs)
-		client.right = m_iWidth - UI_TAB_WIDTH;
-	else
-		client.right = m_iWidth;
-
-	client.bottom = m_iHeight - UI_WIN_TOPHEIGHT - UI_WIN_TITLEHEIGHT;
+	client.left = m_x + 8;
+	client.top = m_y + 1 + 27;
+	client.right = m_iWidth - 4 - 12;
+	client.bottom = m_iHeight - 2 - 8 - 26 + 500;
 	return client;
 }
 
